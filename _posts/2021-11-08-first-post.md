@@ -34,7 +34,6 @@ last_modified_at: 2021-11-08
 - 내 생각이나 개인적인 이야기들은 **Seungwoo**에 담을 것이다.  
 - 그 외에 **Guitar** , **Reading** 등등을 추가하려 한다.
 
-
-전체적인 코드 에디터는 Atom을 사용하였다.
+전체적인 코드 에디터는 **Atom**을 사용하였다.
 
 이 글의 제목은 {{page.title}}이고, 마지막으로 수정된 시간은 {{page.last_modified_at}}이다.
