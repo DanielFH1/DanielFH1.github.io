@@ -31,7 +31,7 @@ bundle exec jekyll serve
 Local 컴퓨터 내의 **GitHub Page**폴더에서 작업을 하고 저장을 해준다.  
 3. 그 후 <http://127.0.0.1:4000> 주소로 들어가 새로고침을 눌러주면 적용이 되어있는 모습을 볼 수 있다.  
 
-그리고 모든 작성이 끝났다면, **command**창에
+그리고 모든 작성이 끝났다면, **command**창에 
 ```
 git add .
 git commit -m "commit comment"
