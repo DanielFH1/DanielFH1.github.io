@@ -23,7 +23,7 @@ name                     : "Seungwoo Lim"
 description              : "For what I've learned today and for daily log"
 url                      : "https://danielfh1.github.io/ "
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : DanielFH1/DanielFH1.github.io
+repository               : danielfh1/comments
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Seungwoo Lim's Blog"
@@ -31,7 +31,7 @@ breadcrumbs              : true
 words_per_minute         : 300
 # 댓글 관련 부분
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : danielfh1 # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -42,8 +42,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                : "photon-dark"
+    issue_term           : "pathname" # (default)
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
     category_name        : # Full text name of the category
@@ -289,6 +289,7 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar_main: true
 
   # _pages
   - scope:
