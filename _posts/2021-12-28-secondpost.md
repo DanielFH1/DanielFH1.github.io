@@ -1,5 +1,5 @@
 ---
-title: "GitHub 페이지 작성에 대해"
+title: "GitHub 페이지 작성방법과 팁"
 excerpt: "방법론적인 얘기와 자잘한 팁들"
 
 categories:
