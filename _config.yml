@@ -23,7 +23,7 @@ name                     : "Seungwoo Lim"
 description              : "For what I've learned today and for daily log"
 url                      : "https://danielfh1.github.io/ "
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : danielfh1/comments
+repository               : "danielfh1/comments"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Seungwoo Lim's Blog"
