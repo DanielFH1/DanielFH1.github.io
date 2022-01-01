@@ -1,5 +1,5 @@
 ---
-title: "Data Science"
+title: "About Data Science"
 layout: archive
 permalink: categories/datascience
 author_profile: true
