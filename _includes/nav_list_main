@@ -33,8 +33,8 @@
         <span class="nav__sub-title">Computer Science</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "DataScience" %}
-                        <li><a href="/categories/datascience" class="">Data Science ({{category[1].size}})</a></li>
+                    {% if category[0] == "Data Science" %}
+                        <li><a href="/categories/data-science" class="">Data Science ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -42,6 +42,13 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Python" %}
                         <li><a href="/categories/python" class="">Python ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Web Programming" %}
+                        <li><a href="/categories/web-programming" class="">Web ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
