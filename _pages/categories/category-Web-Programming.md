@@ -1,5 +1,5 @@
 ---
-title: "About Web Programming"
+title: "HTML & CSS & JS를 활용한 Web Programming 연습내용들"
 layout: archive
 permalink: categories/web-programming
 author_profile: true
