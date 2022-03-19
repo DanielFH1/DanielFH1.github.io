@@ -27,6 +27,8 @@ bundle exec jekyll serve
 ```
 를 입력하면 웹사이트를 서버에 올리고 <http://127.0.0.1:4000> 이런 주소를 받게 된다.  
 
+종료할 땐 Ctrl+C 누르고 Y를 눌러서 나가면 된다.  
+
 2. 여기서 각자 보유하고 있는 **Atom** 이나 **VS Code**같은 코드 에디터를 사용해서  
 Local 컴퓨터 내의 **GitHub Page**폴더에서 작업을 하고 저장을 해준다.  
 3. 그 후 <http://127.0.0.1:4000> 주소로 들어가 새로고침을 눌러주면 적용이 되어있는 모습을 볼 수 있다.  
@@ -35,6 +37,12 @@ Local 컴퓨터 내의 **GitHub Page**폴더에서 작업을 하고 저장을 �
 ```
 git add .
 git commit -m "commit comment"
-git push
+git push origin main
 ```
 를 입력해줘서 원격 저장소에 Push를 해준 뒤 마무리하면 된다.
+
+# 2. 글 작성할 때 생각할 것
+## 2-1. 신규 카테고리 추가
+신규 카테고리를 새로 추가해서 글을 작성할 땐 생각해야 될 것은
+1. **_pages\categories** 폴더에 새로운 카테고리에 대한 md파일 작성  
+2. **_includes\nav_list_main** 파일에 category 등록
