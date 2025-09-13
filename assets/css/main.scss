@@ -12,3 +12,8 @@
 .utterances {
   max-width: 100% !important;
 }
+
+/* Gist 꼬리표(Footer) 숨기기 */
+.gist .gist-meta {
+  display: none !important;
+}
