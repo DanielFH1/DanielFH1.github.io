@@ -1,0 +1,10 @@
+# _data/sidebar_nav.yml
+
+- title: "Computer Science"
+  subcategories:
+    - "NLP"
+    - "Deep Learning/ Machine Learning"
+    - "Algorithms"
+    - "Security"
+
+- title: "Blog"

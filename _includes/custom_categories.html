@@ -1,0 +1,27 @@
+<nav class="nav__list">
+  <ul class="nav__items" id="category_tag_menu">
+    <li>
+        📂 <span style="font-family:'Cafe24Oneprettynight';">All posts</span> <span style="font-family:'Coming Soon';">({{ site.posts.size }})</span>
+    </li>
+
+    {% for group in site.data.sidebar_nav %}
+      <li>
+        <span class="nav__sub-title">{{ group.title }}</span>
+        
+        <ul>
+          {% for sub_cat_name in group.subcategories %}
+            {% for category in site.categories %}
+              {% if category[0] == sub_cat_name %}
+                <li>
+                  <a href="/categories/#{{ category[0] | slugify }}" class="">
+                    {{ category[0] }} ({{ category[1].size }})
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

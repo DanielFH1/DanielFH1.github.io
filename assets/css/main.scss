@@ -1,13 +1,12 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Jekyll이 Liquid 태그를 처리할 수 있도록 Front Matter는 비워둔 채로 유지합니다.
 ---
 
-@charset "utf-8";
+// 스킨과 메인 SCSS 파일을 불러옵니다.
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; 
+@import "minimal-mistakes"; 
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-
-@import url(‘https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap&subset=korean’);
+// --- 사용자 정의 스타일은 이 아래에 추가합니다. ---
 
 .utterances {
   max-width: 100% !important;

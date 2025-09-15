@@ -8,7 +8,7 @@
   <ul class="nav__items" id="category_tag_menu">
       <!--전체 글 수-->
       <li>
-            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style>
+    📂 <span style="font-family:'Cafe24Oneprettynight';">All posts</span> <span style="font-family:'Coming Soon';">({{ site.posts.size }})</span>
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
@@ -33,8 +33,8 @@
         <span class="nav__sub-title">Computer Science</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Data Science" %}
-                        <li><a href="/categories/data-science" class="">Data Science ({{category[1].size}})</a></li>
+                    {% if category[0] == "nlp" %}
+                        <li><a href="/categories/nlp" class="">NLP ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -45,25 +45,11 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">Github Blog</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Web Programming" %}
-                        <li><a href="/categories/web-programming" class="">Web ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        <span class="nav__sub-title">Seungwoo</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Reading" %}
-                        <li><a href="/categories/reading" class="">Reading ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Experience" %}
-                        <li><a href="/categories/experience" class="">Experience ({{category[1].size}})</a></li>
+                    {% if category[0] == "blog" %}
+                        <li><a href="/categories/blog" class="">Blog ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
