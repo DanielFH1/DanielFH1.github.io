@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # 'minimal-mistakes-jekyll' 테마를 직접 명시합니다.
-gem "minimal-mistakes-jekyll"
+#gem "minimal-mistakes-jekyll"
 
 # GitHub Pages 환경과 호환성을 맞추기 위한 Gem 모음입니다.
 gem "github-pages", group: :jekyll_plugins
@@ -22,3 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-admin"
   gem "jekyll-livereload"
 end
+
+# Gemfile
+
+gem "jekyll-include-cache" # <-- 이 줄을 추가
