@@ -8,3 +8,29 @@
     .open-new {
         cursor: pointer;
     }
+
+/* ==========================================================================
+   MathJax 수식 스타일링
+   ========================================================================== */
+    /* 인라인 수식 스타일 */
+    .MathJax {
+        font-size: 1em !important;
+    }
+    
+    /* 디스플레이 수식 스타일 */
+    .MathJax_Display {
+        text-align: center !important;
+        margin: 1em 0 !important;
+        padding: 0.5em 0 !important;
+    }
+    
+    /* 수식 컨테이너 스타일 */
+    .MathJax_Display .MathJax {
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    
+    /* 수식 번호 스타일 */
+    .MathJax_Display .MathJax .MathJax_Ref {
+        margin-left: 0.5em !important;
+    }
