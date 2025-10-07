@@ -51,9 +51,6 @@ This relation can be also proved by contrapositive.
 Long story short, all we need is a **collision-resistant hash**.
 
 # How can we design a cryptographic hash functions? : The Merkle-Damgård Construction
-Blueprint : 구조
-Collision resistance는 어떻게 유지되는가? 
-생각해야 될 것 : 안전한 압축 함수는 어떻게 만들까? 
 
 ## Blueprint of Merkle-Damgård Construction
 

@@ -32,6 +32,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "algorithms" %}
+                        <li><a href="/categories/algorithms" class="">Algorithms ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
             
             <ul>
                 {% for category in site.categories %}
@@ -43,7 +50,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "med" %}
-                        <li><a href="/categories/med" class="">Medical ({{category[1].size}})</a></li>
+                        <li><a href="/categories/med" class="">Med ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
