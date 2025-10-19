@@ -173,7 +173,7 @@ In this case, we still need to add the length field. So, still the padding is ne
 
 ### 3 : Least and Max value of padding
 **Least** padding bit is 1 bit. \\
-ex. $895$ bits : original message($895$) + padding($1$) + length information($128$)
+ex. $895$ bits : original message($895$) + padding($1$) + length information($128$) = $1024$ bits.
 
 **Max** padding bits are 1024 bits.\\
 ex. $896$ bits : original message($896$) + padding($1$) + length information($128$) = $1025$ bits. 
