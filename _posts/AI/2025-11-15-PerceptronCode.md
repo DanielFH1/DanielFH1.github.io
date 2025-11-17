@@ -142,7 +142,7 @@ plt.show()
 
 **What this visualization shows:**
 
-![](../../assets/images/2025-11-16-20-26-41.png)
+![](../../assets/images/synthetic_dataset.jpg)
 
 We convert PyTorch tensors to NumPy arrays with `.numpy()` because matplotlib requires NumPy format. The expression `X_np[y_np == 1, 0]` is fancy indexing that selects all x-coordinates where the label equals +1, and `X_np[y_np == 1, 1]` gets the corresponding y-coordinates. The `alpha=0.75` parameter makes points slightly transparent so we can see overlapping regions. We extract axis ranges using `X_np[:, 0].min()` which takes all rows (`:`) of column 0 (the x-coordinates) and finds the minimum value. Setting `plt.gca().set_aspect('equal')` ensures the x and y axes have the same scale, preventing distortion.
 
@@ -305,7 +305,7 @@ plt.show()
 
 **Plotting the Decision Boundary:**
 
-![](../../assets/images/2025-11-16-20-27-34.png)
+![](../../assets/images/perceptron.jpg)
 
 The decision boundary is where $\mathbf{w} \cdot \mathbf{x} + b = 0$. Solving for $x_2$ gives us: $x_2 = -\frac{w_0}{w_1} x_1 - \frac{b}{w_1}$. This is the equation of a line in slope-intercept form.
 
