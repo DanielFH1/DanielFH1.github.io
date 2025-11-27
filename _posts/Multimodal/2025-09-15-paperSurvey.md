@@ -5,7 +5,7 @@ toc: true
 toc_sticky : true
 use_math: true
 categories:
-    - nlp
+    - multimodal
 ---
 
 # 1. [A survey on LLM Generated text detection(2024)](https://arxiv.org/abs/2310.14724)
