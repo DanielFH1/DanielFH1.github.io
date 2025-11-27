@@ -7,6 +7,8 @@ use_math: true
 categories:
     - med
 ---
+You can check all my code in github:
+[GitHub](https://github.com/DanielFH1/Devprojects/tree/main/sideproject/AI/graph_deeplearning){:target="_blank"}
 
 # Common Experimental Setup
 
