@@ -122,9 +122,6 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/DanielFH1"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/seungwoo_927/"
 
 # Site Footer
 footer:
@@ -143,10 +140,6 @@ footer:
       # url:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/seungwoo_927/"
 
 
 # Reading Files
