@@ -26,3 +26,33 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+<!-- Dark mode toggle logic -->
+<script>
+(function() {
+  var toggle = document.querySelector('.dark-mode-toggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', function() {
+    var html = document.documentElement;
+    var isDark = html.getAttribute('data-theme') === 'dark';
+
+    if (isDark) {
+      html.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+
+    // Sync utterances theme if present
+    var utterances = document.querySelector('.utterances-frame');
+    if (utterances) {
+      utterances.contentWindow.postMessage(
+        { type: 'set-theme', theme: isDark ? 'github-light' : 'photon-dark' },
+        'https://utteranc.es'
+      );
+    }
+  });
+})();
+</script>

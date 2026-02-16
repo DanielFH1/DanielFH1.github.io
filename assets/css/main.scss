@@ -95,3 +95,351 @@ details summary:after {
 details[open] summary:after {
   content: "-";
 }
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+/* ── Dark Mode Toggle Button ── */
+.dark-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin-left: 0.5em;
+  background: none;
+  border: 1.5px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  vertical-align: middle;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dark-mode-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.dark-mode-toggle .icon-sun {
+  display: none;
+  color: #f0c040;
+}
+
+.dark-mode-toggle .icon-moon {
+  display: block;
+  color: #555;
+}
+
+/* ── Dark Theme Overrides ── */
+[data-theme="dark"] {
+
+  /* Base */
+  body {
+    background-color: #1a1d23;
+    color: #d4d4d8;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: #e4e4e7;
+  }
+
+  /* Links */
+  a {
+    color: #7cb8e4;
+  }
+  a:visited {
+    color: #9a8cd8;
+  }
+  a:hover {
+    color: #a8d4f5;
+  }
+
+  /* Masthead */
+  .masthead {
+    background-color: #1e2129;
+    border-bottom-color: #2e3138;
+  }
+  .greedy-nav {
+    background: #1e2129;
+  }
+  .greedy-nav a {
+    color: #d4d4d8;
+  }
+  .greedy-nav a:hover {
+    color: #f4f4f5;
+  }
+  .greedy-nav .visible-links a:before {
+    background: #7cb8e4;
+  }
+  .greedy-nav button {
+    color: #d4d4d8;
+  }
+
+  /* Hidden nav dropdown */
+  .hidden-links {
+    background: #22252d;
+    border-color: #2e3138;
+  }
+  .hidden-links a {
+    color: #d4d4d8 !important;
+  }
+
+  /* Site title */
+  .site-title,
+  .site-subtitle {
+    color: #e4e4e7;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs ol li a {
+    color: #7cb8e4;
+  }
+
+  /* Page title, content */
+  .page__title a {
+    color: #e4e4e7;
+  }
+  .page__content {
+    h2 {
+      border-bottom-color: #2e3138;
+    }
+  }
+  .page__meta,
+  .page__date {
+    color: #8b8b94;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    color: #c0c0c7;
+  }
+  .sidebar .author__name {
+    color: #e4e4e7;
+  }
+  .sidebar .author__bio {
+    color: #a1a1aa;
+  }
+  .sidebar .author__urls-wrapper button {
+    color: #d4d4d8;
+    background-color: #2a2d35;
+  }
+  .sidebar .author__urls a {
+    color: #a1a1aa;
+  }
+  .sidebar .author__urls a:hover {
+    color: #e4e4e7;
+  }
+
+  /* Nav list (sidebar categories) */
+  .nav__list .nav__items a {
+    color: #c0c0c7;
+  }
+  .nav__list .nav__items a:hover {
+    color: #f4f4f5;
+  }
+  .nav__list .nav__items .active {
+    color: #7cb8e4;
+  }
+
+  /* Archive / post list */
+  .archive__item-title a {
+    color: #d4d4d8;
+  }
+  .archive__item-title a:hover {
+    color: #7cb8e4;
+  }
+  .archive__item-excerpt {
+    color: #a1a1aa;
+  }
+
+  /* Taxonomy section */
+  .taxonomy__section .archive__subtitle {
+    border-bottom-color: #2e3138;
+  }
+
+  /* TOC */
+  .toc {
+    background-color: #22252d;
+    border-color: #2e3138;
+  }
+  .toc .nav__title {
+    color: #e4e4e7;
+    background-color: #2a2d35;
+    border-bottom-color: #2e3138;
+  }
+  .toc a {
+    color: #a1a1aa;
+  }
+  .toc a:hover,
+  .toc .active a {
+    color: #7cb8e4;
+  }
+
+  /* Footer */
+  .page__footer {
+    background-color: #15171c;
+    color: #8b8b94;
+  }
+  .page__footer a {
+    color: #a1a1aa;
+  }
+  .page__footer a:hover {
+    color: #d4d4d8;
+  }
+  .page__footer .fas,
+  .page__footer .fab,
+  .page__footer .far,
+  .page__footer .fal {
+    color: #8b8b94;
+  }
+
+  /* Code blocks */
+  :not(pre) > code {
+    background-color: #2a2d35 !important;
+    color: #7dd3c0 !important;
+  }
+  pre {
+    background-color: #1e2129;
+    border-color: #2e3138;
+    color: #d4d4d8;
+  }
+  div.highlighter-rouge,
+  figure.highlight {
+    background-color: #1e2129;
+    border-color: #2e3138;
+  }
+
+  /* Notices */
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    background-color: #22252d;
+    color: #d4d4d8;
+  }
+
+  /* Tables */
+  table {
+    color: #d4d4d8;
+  }
+  table th {
+    background-color: #22252d;
+    border-color: #2e3138;
+    color: #e4e4e7;
+  }
+  table td {
+    border-color: #2e3138;
+  }
+  table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  /* Pagination */
+  .pagination a {
+    color: #a1a1aa;
+    border-color: #2e3138;
+  }
+  .pagination a:hover {
+    color: #7cb8e4;
+  }
+  .pagination a.current {
+    background: #7cb8e4;
+    color: #fff;
+  }
+
+  /* Search */
+  .search-content {
+    background-color: #1a1d23;
+  }
+  .search-content .search-input {
+    background-color: #22252d;
+    color: #d4d4d8;
+    border-color: #2e3138;
+  }
+
+  /* Forms */
+  input, textarea, select {
+    background-color: #22252d;
+    color: #d4d4d8;
+    border-color: #2e3138;
+  }
+
+  /* Blockquote */
+  blockquote {
+    border-left-color: #3a3d45;
+    color: #a1a1aa;
+  }
+
+  /* HR */
+  hr {
+    border-color: #2e3138;
+  }
+
+  /* Images — subtle border */
+  img {
+    opacity: 0.92;
+  }
+
+  /* Details / Summary */
+  details {
+    border-color: #2e3138;
+  }
+  details summary {
+    background-color: #22252d;
+    color: #d4d4d8;
+  }
+  details summary:hover {
+    background-color: #2a2d35;
+  }
+
+  /* Social share buttons */
+  .btn {
+    color: #d4d4d8;
+  }
+
+  /* Gist */
+  .gist .gist-file,
+  .gist .gist-data {
+    background-color: #1e2129 !important;
+    border-color: #2e3138 !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Utterances dark */
+  .utterances-frame {
+    color-scheme: dark;
+  }
+
+  /* Dark mode toggle hover */
+  .dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .dark-mode-toggle .icon-sun {
+    display: block;
+  }
+
+  .dark-mode-toggle .icon-moon {
+    display: none;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(124, 184, 228, 0.3);
+    color: #f4f4f5;
+  }
+}
