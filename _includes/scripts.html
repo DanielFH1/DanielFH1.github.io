@@ -56,3 +56,58 @@
   });
 })();
 </script>
+
+<!-- Scroll popup reveal for post images -->
+<script>
+(function() {
+  function initImageScrollPopup() {
+    var images = document.querySelectorAll('.layout--single .page__content img');
+    if (!images.length) return;
+
+    var targets = [];
+    images.forEach(function(img) {
+      // 아이콘/이모지처럼 작은 이미지는 제외
+      if (img.classList.contains('emoji')) return;
+      if ((img.naturalWidth && img.naturalWidth < 80) || (img.width && img.width < 80)) return;
+
+      img.classList.add('img-scroll-pop');
+      targets.push(img);
+    });
+
+    if (!targets.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(function(img) { img.classList.add('is-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -8% 0px',
+      threshold: 0.12
+    });
+
+    targets.forEach(function(img) {
+      // 첫 화면에 보이는 이미지는 즉시 표시
+      var rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9) {
+        img.classList.add('is-visible');
+      } else {
+        observer.observe(img);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initImageScrollPopup);
+  } else {
+    initImageScrollPopup();
+  }
+})();
+</script>
